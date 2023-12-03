@@ -10,7 +10,7 @@ const ContactSchema = mongoose.Schema ({
     required:true
   },
   phone :{
-    typr:String,
+    type:Number,
     required:true
   }
 
@@ -19,6 +19,6 @@ const ContactSchema = mongoose.Schema ({
     timestamps:true,
 });
 
-const contact = mongoose.model ("contact",ContactSchema)
+const Contacts = mongoose.model ("Contact",ContactSchema)
 
-export default contact 
+export default Contacts
