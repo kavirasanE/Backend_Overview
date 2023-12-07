@@ -3,13 +3,15 @@ import dotenv from 'dotenv'
 import router from './routes/contactRoute.js';
 import errorhandler from './middleware/errorhandler.js'
 import mongoose from 'mongoose';
+import userRouter from'./routes/userRoute.js'
 dotenv.config();
 const app =express();
 
 const port =process.env.PORT;
 
 app.use(express.json());
-app.use('/api/contacts',router )
+app.use('/api/contacts',router);
+app.use('/api/user',userRouter);
 app.use (errorhandler)
 
 
